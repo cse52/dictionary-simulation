@@ -53,7 +53,7 @@ int main()
 	}
 	SaveDictionary(head);
 	printf("%s\n", "<Info: Dictionary Database Updated>");
-	printf("%s\n", "======================END======================");
+	printf("%s\n", "======================END=======================");
 	return 0;
 }
 

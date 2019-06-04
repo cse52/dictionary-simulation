@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define MAX_WORD_LEN 20
-#define MAX_MEANING_LEN 100
+#define MAX_WORD_LEN 300
+#define MAX_MEANING_LEN 10000
 
 typedef struct node {
 	char *word;
@@ -29,19 +29,27 @@ void InitializeDictionary(Node **head){
 	char file_addr[100] = "./res/dict_db.txt";
 	int total_words;
 	char ch;
-	char *word = (char *) calloc(MAX_WORD_LEN, sizeof(char));
-	char *meaning = (char *) calloc(MAX_MEANING_LEN, sizeof(char));
+
+	char *word = (char *) malloc(MAX_WORD_LEN * sizeof(char));
+	char *meaning = (char *) malloc(MAX_MEANING_LEN * sizeof(char));
 
 	FILE *fp = fopen(file_addr, "r");
 	if(fp){
 		fscanf(fp, "words:%d\n", &total_words);
-		for (int i = 0; i < total_words; ++i){
+		while(total_words--){
+			word = (char *) realloc(word, MAX_WORD_LEN * sizeof(char));
+			meaning = (char *) realloc(meaning, MAX_MEANING_LEN * sizeof(char));
+
 			fscanf(fp, "%[^:]s", word);
+			word = realloc(word, (sizeof(char)*strlen(word)+1));
 			ch = getc(fp);		// to remove the : character between word and meaning
-			fscanf(fp, "%[^\nEOF]s", meaning);
-			ch = getc(fp);
+			fscanf(fp, "%[^\n]s", meaning);
+			meaning = realloc(meaning, (sizeof(char)*strlen(meaning)+1));
+			ch = getc(fp);		// to remove the \n at the end of each line
+
 			InsertLexi(head,word,meaning,0);
 		}
+
 		fclose(fp);
 	} else {
 		printf("\t<%s>\n", "Fatal: Dictionary Database Not Found! Exiting..");
@@ -65,8 +73,8 @@ void SaveDictionary(Node *head){
 
 Node* getNewNode(char *word, char *meaning) {
 	Node *newNode = (Node *) malloc(sizeof(Node));
-	newNode->word = (char *) malloc(sizeof(word));
-	newNode->meaning = (char *) malloc(sizeof(meaning));
+	newNode->word = (char *) malloc(sizeof(char)*strlen(word));
+	newNode->meaning = (char *) malloc(sizeof(char)*strlen(meaning));
 	strcpy(newNode->word,word);
 	strcpy(newNode->meaning,meaning);
 	newNode->next = NULL;

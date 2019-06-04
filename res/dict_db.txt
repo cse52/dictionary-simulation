@@ -1,12 +1,280 @@
-words:11
-aaa:adfjl
-aab:adfjl
-apple:a for apple
-applea:a for apple
-apples:a for apple
-baab:adfjl
-ball:b for ball
-cat:c for cat
-go: gone
-tushar: updated thappa
-zebra: wild donkey
+words:279
+air:the mixture of gases that surrounds the Earth and that we breathe
+amount:a collection or mass, especially of something that cannot be counted
+animal:a collection or mass, especially of something that cannot be counted
+answer:the receipt and response to a letter, question or phone call
+apple:a fruit
+approval:the feeling of having a positive opinion of someone or something@/@êù
+art:the activity of making objects, drawings, music, paintings etc that are beautiful or that express feelings
+attack:to try to hurt or defeat
+attention:notice, thought or interest
+back:(adverb) in return, into, towards a previous place or condition, or an earlier time; (noun) the part of your body that is opposite to the front, from your shoulder to your bottom
+base:the bottom part of an object, on which it rests, or the lowest part of something°1@¯Å
+behavior:the way that someone behaves
+belief:the feeling of being certain that something exists or is true, something that you believe
+birth:the time when a young baby, or young animal comes out of its motherâ€™s body
+blood:the red liquid that is sent around the body by the heart
+blow:to move and make currents of air, or to make a sound by forcing air out of your mouth
+body:the whole physical structure that forms a person or animal
+bread:a food made from flour, water and usually yeast, mixed together and baked
+breath:the air that goes into and out of your lungs
+brother:a man or boy with the same parents as another person
+building:a structure with walls and a roof, such as a house or a factory
+burn:to be hurt, damaged or destroyed by fire or extreme heat, or to cause this to happen
+business:the activity of buying and selling goods and services
+butter:a pale yellow food containing a lot of fat that is made from cream, usually spread on bread or used in cooking
+care:the process of protecting someone or something, and providing what they need
+cause:the reason why something, especially something bad, happens
+chance:an occasion that allows something to be done
+change:to exchange one thing for another thing, or to make or become different
+cloth:a type of woven material, usually used in cleaning to remove dirt, dust or liquid
+color:red, blue, green, yellow, red, orange etc
+comfort:a pleasant feeling of being relaxed and free from pain
+company:an organization that sells goods or services in order to make money
+comparison:the act of comparing two or more people or things
+competition:a situation in which someone is trying to win something or be more successful than someone else
+connection:the state of being related to someone or something
+cook:(verb) when you prepare food to be eaten by heating it until it is ready, or (noun) a person who prepares and cooks food
+country:an area of land that has its own government, army etc
+cover:to put or spread something over something, or to lie on the surface of somethingpraise, approval or honour
+credit:praise, approval or honour
+cry:to produce tears as the result of a strong emotion, such as sadness, fear, happiness or pain
+current:of the present time
+damage:to harm or spoil something
+danger:the possibility of harm or death to someone
+daughter:your female child
+day:a period of 24 hours
+death:the end of life
+decision:a choice that you make about something after thinking about all the possible options
+detail:a single piece of information or fact about something
+development:the process in which someone or something grows or changes and becomes more advanced
+direction:the position towards which someone or something moves or faces
+discovery:the process of finding information, a place or an object, especially for the first time
+discussion:the activity in which people talk about something and tell each other their ideas or opinions
+disease:an illness of people, animals or plants caused by infection or a lack of health
+distance:the amount of space between two places
+doubt:(a feeling of) not being certain about something, especially how good or true it is
+drink:(noun) liquid that is taken into the body through the mouth, or (verb) to take liquid into the body through the mouth
+driving:the ability to drive a car, the activity of driving, or the way someone drives
+dust:dry dirt in the form of powder that covers surfaces inside a building, or very small dry pieces of soil etc
+earth:our planet, the third in order from the sun, between Venus and Mars, the world on which we live. Also another term for soil on the ground
+education:the process of teaching or learning in a school or college, or the knowledge that you get from this
+effect:the result of a particular influence
+end:the part of a place or thing that is the furthest away from the start, or the final part of something such as a period of time, activity or story
+error:a mistake
+example:a way of helping someone to understand something by showing them how it is used
+experience:(the process of getting) knowledge or skill from doing, seeing or feeling things, or something that happens to you which affects how you feel
+expert:a person with a high level of knowledge or skill relating to a particular subject or activity
+fact:something that is known to have happened or to exist, especially something for which proof exists
+fall:to suddenly go down onto the ground or towards the ground without intending to, or by accident
+family:a group of people who are related to each other such as a mother, father and their children
+father:a male parent
+fear:an unpleasant emotion or thought that you have when you are worried or frightened by something dangerous, painful or bad that is happening or may happen
+feeling:the fact of feeling something physical, or an emotion
+fire:the state of burning that produces flames that send out heat and light, and might produce smoke
+flight:a journey in an aircraft
+flower:the part of a plant that is often brightly coloured and has a pleasant smell
+food:something that people and animals eat or plants absorb, to keep them alive
+friend:a person who you know well and like a lot, but who is usually not a member of your family
+front:the part of a personâ€™s body, building or object that faces forward, or is most often seen or used
+fruit:the soft part containing seeds that is produced by a plant. Many types of fruit are sweet and can be eaten
+glass:a hard transparent material used to make windows bottles and other objects
+gold:a chemical element that is a valuable, shiny, yellow metal used to make coins and jewellery
+government:the group of people that officially control a country
+grain:a seed or seeds from a plant, especially a plant like a grass such as rice or wheat
+grass:a low, green plant that grows naturally from soil on the Earthâ€™s surface
+growth:the growth of a person, animal or plant is its process of increasing in size
+guide:written information or a person that gives you the history of, or most important facts about, a particular or subject
+harbour:an area of water next to the coast, often protected from the sea by a thick wall, where ships and boats can shelter
+hate:to dislike someone or something very much
+hearing:the ability to hear, or an official meeting that is held to collect the facts about an event or problem
+heat:the quality of being hot or warm, or the temperature of something
+help:to make it possible or easier for someone to do something, by doing part of the work yourself
+history:to make it possible or easier for someone to do something, by doing part of the work yourself
+:to want something to happen or to be true, and usually have a good reason to think that it might
+hour:a period of 60 minutes
+ice:water that has frozen and become solid, or pieces of this
+idea:a suggestion or plan for doing something
+increase:to (make something) become larger in amount or size
+industry:the companies and activities involved in the process of producing goods for sale, especially in a factory or special area
+instrument:an object such as a guitar or drum that is played to produce musical sounds
+insurance:an agreement in which you pay a company money and they pay your costs if you have an accident or injury
+interest:the feeling of wanting to give your attention to something or someone, or wanting to be involved with and to discover more about something
+iron:a chemical element that is a common greyish-coloured metal. It is strong, used in making steel, and exists in very small amounts in blood
+join:to connect or fasten things together
+journey:the act of travelling from one place to another, especially in a vehicle
+jump:to push yourself suddenly off the ground and into the air using your legs
+kick:to hit someone or something with the foot, or to move the feet and legs suddenly and violently
+kiss:to touch another personâ€™s cheek or hand with your lips, especially as a greeting, or to press your mouth onto another personâ€™s mouth in a sexual way
+knowledge:understanding of, or information about, a subject that you get by experience or study
+land:the surface of the Earth that is not covered by water
+language:a system of communication consisting of sounds, words and grammar
+laugh:to smile when making sounds with your voice that show you think something is funny or that you are happy
+lead:to control a group of people, a country or situation
+learning:the activity of obtaining knowledge, or knowledge obtained by study
+letter:a written message from one person to another, usually put in an envelope and sent by post
+level:the height of something, or the amount or number of something
+light:the brightness that comes from the sun, fire and some electrical devices, and that allows things to be seen
+limit:the greatest amount, number or level of something that is either possible or allowed
+liquid:a substance, such as water, that is not solid or a gas and that can be poured easily
+look:to direct your eyes in order to see
+loss:the fact that you no longer have something, or have less of something
+love:to like another adult very much and be romantically and sexually attracted to them, or to have strong feelings of liking a friend or person in your family in a non-sexual way
+low:not measuring much from the base to the top, close to the ground or the bottom of something
+machine:a piece of equipment with several moving parts that uses power to do a particular type of work
+man:an adult male human being
+market:the people who might want to buy something, or a part of the world where something is sold, or the business or trade in a particular product
+mass:(adjective) having an effect on or involving a large number of people, or forming a large amount. (noun) a large amount of something that has no particular shape or arrangementmilk
+meal:an occasion when food is eaten, or the food that is eaten on such an occasion
+measure:to discover the exact size or amount of something, or to be of a particular sizemeeting
+meat:the flesh of an animal when it is used for food
+meeting:an occasion when people come together intentionally, usually in a formal/business sense
+memory:the ability to remember information, experiences and people
+middle:the central point, position or part
+milk:the white liquid produced by cows, goats, sheep, and used by humans as a drink or for making butter and cheese
+mind:the part of a person that makes it possible for him or her to think, feel emotions and understand things
+mine:the one(s) belonging to or connected with me (the speaker)
+minute:one of the 60 parts that an hour is divided into, consisting of 60 seconds
+mist:thin fog produced by very small drops of water collecting in the air just above an area of ground or water
+money:coins or notes that are used to buy things, or the amount of these that one person has
+month:a period of about 4 weeks, especially one of the 12 periods into which a year is divided
+morning:the part of the day from the time the sun rises or you wake up, until the middle of the day or lunch time
+mother:a female parent
+mountain:a raised part of the Earthâ€™s surface, much larger than a hill
+move:to (cause to) change position
+music:a pattern of sounds made by musical instruments, voices or computers, intended to give pleasure to people listening to it
+nation:a large aggregate of people united by common descent, history, culture or language, inhabiting a particular country or territory@z@êù
+need:the urge to have something, or want something very much
+news:information or reports about recent events
+night:the part of every 24-hour period when it is dark, because there is very little light from the sun
+noise:a sound or sounds, especially when it is unwanted, unpleasant or loud
+number:a unit that forms part of the system of counting or calculating
+offer:to ask someone if they would like to have something, or they would like you to do something
+oil:a thick liquid that comes from petroleum, used as a fuel, and for making parts of machines move easily
+opinion:a thought, belief or judgement about someone or something
+order:a request to make, supply or deliver food or goods
+organization:a group of people who work together in an organized way for a shared purpose
+owner:someone who owns something
+page:a side of one of the pieces of paper in a book, magazine or newspaper
+pain:a feeling of physical, emotional or mental suffering
+paint:a coloured liquid that is put on a surface, such as a wall, to decorate it
+paper:thin, flat material made from crushed wood or cloth, used for writing, printing or drawing on
+part:some, but not all of a thing
+paste:a think, soft, sticky substance made by crushing or mixing things such as fish, fruit or vegetables for food, or a liquid with powder for glue
+payment:an amount of money paid or the process of giving money owed to another
+peace:free from war and violence, especially when people live and work together happily, without disagreements
+person:a man, woman or child
+place:an area, town or building
+plant:a living thing that grows in earth, or water, usually has a stem, leaves and roots, and produces seeds
+play:spending time doing an enjoyable and/or entertaining activity
+pleasure:enjoyment, happiness and satisfaction, or something that gives this
+position:the place where something or someone is, often in relation to other things
+power:ability to control people and events
+price:the amount of money for which something is sold
+process:a series of actions that you take in order to achieve a result
+produce:(verb) to make something or bring something into existence. (noun) food or any other substance that is grown or obtained through farming
+profit:money that is earned in trade or business, after paying any costs related to producing selling goods
+property:an object/objects, building or land that belong to someone
+pull:to move something towards yourself, sometimes with great physical effort
+punishment:the act of punishing someone
+purpose:why you do something, or why something exists
+push:to use physical pressure or force, especially with your hands, in order to move something into a position that is further away from you
+quality:how good or bad something is
+question:a sentence or phrase used to find out information
+rain:drops of water from clouds
+reaction:behaviour, a feeling or an action that is the direct result of something
+reading:the skill or activity of getting information from books
+reason:the cause of an event or situation, something that provides an excuse or explanation
+record:(verb) to store sounds or moving pictures using electronic equipment. (noun) the best or fastest ever done. (noun) a flat plastic disc on which music is recorded
+regret:a feeling of sadness about something sad or wrong, or about a mistake that you have made
+relation:the way in which two people or groups of people feel and behave towards each other
+religion:the belief in, and worship of, a god or gods
+request:the act of politely or officially asking for something
+respect:admiration felt or shown for someone or something that you believe has good ideas or qualities
+rest:to stop doing a particular activity in order to relax and regain your strength
+reward:something given in exchange for good behaviour or good work
+rice:the small seeds of a particular type of grass, cooked and eaten as food
+river:a natural wide flow of fresh water across the land into the sea, a lake or another river
+road:a long hard man-made surface built for vehicles to travel along
+room:a part of the inside of a building that is separated from other parts by walls, floor and ceiling
+rule:a principle or instruction that states the way things are and how they should be done, and tells you what you are and arenâ€™t allowed to do
+run:to move along, faster than walking, by taking quick steps
+salt:a common white substance found in sea water and in the ground, used especially to flavour food or to preserve ita substance that consists of very small grains of rock, found on beaches and deserts
+sand:a substance that consists of very small grains of rock, found on beaches and deserts
+sea:the salty water that covers a large surface of the Earth
+seat:a piece of furniture in a building or vehicle, that has been designed for someone to sit on
+secretary:someone who works in an office, writing letters, making phone calls and arranging meetings
+selection:the act of choosing someone or something
+sense:an ability to understand, recognize, value, or react to something, especially any of the five abilities to see, hear, smell, feel and taste
+shade:slight darkness caused by something blocking the direct light from the sun
+shake:to move or make something or someone move, backwards and forwards or up and down in short quick movements
+shame:an uncomfortable feeling of guilt or of being ashamed, because of your own or someone elseâ€™s bad behaviour
+shock:the emotional or physical reaction to a sudden unexpected and usually unpleasant event or experience
+side:a flat outer surface of an object, especially one that is not the top, bottom, the front nor the back
+sign:to write your name, usually on a written or printed document, to show that you agree with its contents
+silver:a chemical element that is a valuable shiny white metal, used for making cutlery, jewellery, coins or decorative objects
+sister:a girl or woman who has the same parents as another person
+size:how large or small someone or something is
+sky:the area above the earth, in which clouds, the sun, moon and stars can be seen
+sleep:the resting state in which the body is not active and the mind is unconscious
+slip:to slide without intending to, or to move out of the correct position
+smash:to cause something to break noisily into a lot of small pieces
+smell:to have a particular quality that others can notice with their noses
+smile:a happy or friendly expression on the face in which the ends of the mouth curve up slightly, often with lips parted so that teeth can be seen
+smoke:the mixture of gas and very small pieces of carbon that is produced when something burns
+sneeze:when you sneeze, air and often small drops of liquid suddenly come out of your mouth and nose in a way that you cannot control
+snow:the small soft, white pieces of ice that sometimes fall from the sky when it is extremely cold
+soap:a substance used for washing the body, that is usually hard, often has a pleasant smell and produces a mass of bubbles when rubbed with water
+society:a large group of people who live together in an organized way. All the people in a country, or in several similar countries, could be referred to as a society
+son:someoneâ€™s male child
+song:a usually short piece of music where words are sung
+sort:(noun) a group of things that are of the same type, or that share similar qualities. (verb) to put a number of things in an order, or to separate them into groups
+sound:something that you can hear or that can be heard°¥@¯Å
+soup:a usually hot liquid food made from meat, vegetables or fish
+space:an empty area that is available to be used. The area around everything that exists, continuing in all directions`£@¯Å
+start:to begin doing something
+step:to move by lifting your foot, and putting it down in a different place, or to put your foot in or on something
+stone:a piece of the hard solid substance that is found in the ground, and that is often used for building
+stop:to not continue to operate, to not move anymore, or to make someone or something not move anymore
+story:a description either true or imagined, of a connected series of events
+structure:the way in which the parts of a system or object are arranged or organized, or a system arranged in this way
+sugar:a sweet substance especially from the plants sugar cane and sugar beet, used to make food and drinks sweet
+suggestion:an idea, plan or action that is suggested, or the act of suggesting it
+summer:the season of the year between spring and autumn when the weather is the warmest, lasting from June to September in the UK
+surprise:an unexpected event
+swim:to move through water by moving parts of your body
+talk:to say words aloud; to speak to someone
+taste:the flavour of something, or the ability of a person or animal to recognize different flavours
+tax:money paid to the government that is based on your income or the cost of goods or services you have bought
+teaching:the job of being a teacher; the role/act of educating another person in any particular subject
+thing:used to refer in an approximate way to an object or to avoid naming it
+thought:the act of thinking about or considering something, an idea or opinion, or a set of ideas about a particular subject
+time:the part of existence that is measured in minutes, days or years, or this process considered as a whole
+to (cause to) change position:the word or words that a person, thing or place is known by
+touch:to put your hand or another part of your body lightly onto and off something or someone
+trade:the activity of buying and selling or exchanging goods and/or services between people or countries
+transport:the movement of people or goods from one place to another
+trouble:problems or difficulties, or a negative characteristic of someone
+turn:to (cause to) move in a circle round a fixed point or line
+use:to put something such as a tool, skill or building to a particular purpose
+value:the amount of money that can be received for something
+view:an opinion, belief or idea, or a way of thinking about something; what someone can see in their peripheral vision
+voice:the sounds that are made when people speak or sing
+walk:to move along by putting one foot in front of the other
+war:armed fighting between two or more countries or groups, or a particular example of this
+wash:to clean something using water and usually soap
+waste:an unnecessary or wrong use of things such as money, substances, time, energy or abilities
+water:a clear liquid, without colour or taste, that falls from the sky as rain, and is necessary for animal and plant life
+way:a route, direction or path
+weather:the conditions in the air above the earth such as wind, rain or temperature, especially at a particular time or over a particular area
+week:a period of seven days, usually from Monday to Sunday
+weight:the amount that someone or something weighs
+wind:a current of air moving approximately horizontally, especially one strong enough to be felt
+wine:an alcoholic drink generally made from grapes but that can also be made from other fruits or flowers
+winter:the season between autumn and spring, when the weather is the coldest
+woman:an adult female human being
+wood:a hard substance that forms the branches and trunks of trees and can be used as a building material, for making things, or as a fuel
+word:a single unit of language that has meaning and can be spoken or written
+work:an activity, such as a job, that a person uses physical or mental effort to do, usually for money
+writing:a personâ€™s style of writing with a pen on paper that can be recognized as their own
+year:a period of twelve months
