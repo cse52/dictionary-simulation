@@ -1,0 +1,12 @@
+words:11
+aaa:adfjl
+aab:adfjl
+apple:a for apple
+applea:a for apple
+apples:a for apple
+baab:adfjl
+ball:b for ball
+cat:c for cat
+go: gone
+tushar: updated thappa
+zebra: wild donkey
