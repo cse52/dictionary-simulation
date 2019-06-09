@@ -10,6 +10,8 @@ typedef struct node {
 	struct node *next;
 } Node;
 
+const char db_addr[100] = "./res/dict_min.txt";
+
 // protypes
 void InitializeDictionary(Node **head);
 void SaveDictionary(Node *head);
@@ -26,14 +28,13 @@ int Size(Node *head);
 // function definitions
 
 void InitializeDictionary(Node **head){
-	char file_addr[100] = "./res/dict_db.txt";
 	int total_words;
 	char ch;
 
 	char *word = (char *) malloc(MAX_WORD_LEN * sizeof(char));
 	char *meaning = (char *) malloc(MAX_MEANING_LEN * sizeof(char));
 
-	FILE *fp = fopen(file_addr, "r");
+	FILE *fp = fopen(db_addr, "r");
 	if(fp){
 		fscanf(fp, "words:%d\n", &total_words);
 		while(total_words--){
@@ -58,8 +59,7 @@ void InitializeDictionary(Node **head){
 }
 
 void SaveDictionary(Node *head){
-	char file_addr[100] = "./res/dict_db.txt";
-	FILE *fp = fopen(file_addr, "w");
+	FILE *fp = fopen(db_addr, "w");
 	Node *temp = head;
 	fprintf(fp, "%s:%d\n", "words",Size(head));
 	while(temp->next != NULL) {

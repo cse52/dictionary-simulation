@@ -1,0 +1,13 @@
+words:12
+app:an application
+apple:a fruit
+apples:plural of apple
+boy:a male child
+cool:a fairly low temperature
+data:facts
+english:a language related to england
+girl:a female child
+kind:character or nature
+nice:pleasant & attractive
+school:a institute for educating children
+student:a person who is studying
