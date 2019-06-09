@@ -12,6 +12,7 @@ Implementation of dictionary using Binary Search Tree
 #define MAX_MEANING_LEN 10000
 
 // dictionary database address
+FILE *fp;
 const char db_addr[100] = "./res/dict_min.txt";
 
 typedef struct node {
@@ -26,7 +27,7 @@ void InitializeDictionary(Node **root);
 void SaveDictionary(Node *root, int status);
 Node* getNewNode(char* word, char *meaning);
 void InsertLexi(Node **root, char *word, char *meaning, int info_flag, int init_flag);
-void UpdateMeaning(Node **root, char *word, char *meaning, int status);
+int UpdateMeaning(Node **root, char *word, char *meaning, int status);
 void Search(Node *root, char *data, int init_flag);
 int FindExact(Node *root, char *word, int init_flag);
 // void Delete(Node **root, char *data);
@@ -44,7 +45,7 @@ void InitializeDictionary(Node **root){
 	char *word = (char *) malloc(MAX_WORD_LEN * sizeof(char));
 	char *meaning = (char *) malloc(MAX_MEANING_LEN * sizeof(char));
 
-	FILE *fp = fopen(db_addr, "r");
+	fp = fopen(db_addr, "r");
 	if(fp){
 		fscanf(fp, "words:%d\n", &total_words);
 		while(total_words--){
@@ -69,7 +70,6 @@ void InitializeDictionary(Node **root){
 }
 
 void SaveDictionary(Node *root, int init_flag){
-	FILE *fp;
 	if(init_flag == 0) {
 		fp = fopen(db_addr, "w");
 		fprintf(fp, "%s:%d", "words",Size(root));
@@ -109,8 +109,10 @@ void InsertLexi(Node **root, char *word, char *meaning, int info_flag, int init_
 	}
 
 	if(strcmp(word, (*root)->word) < 0) {
+		// printf("comparing: %s | %s : %d\n", word, (*root)->word, strcmp(word, (*root)->word));
 		InsertLexi(&((*root)->left), word, meaning, info_flag, 1);
 	} else if(strcmp(word, (*root)->word) > 0) {
+		// printf("comparing: %s | %s : %d\n", word, (*root)->word, strcmp(word, (*root)->word));
 		InsertLexi(&((*root)->right), word, meaning, info_flag, 1);
 	} else {
 		if(info_flag)
@@ -121,11 +123,11 @@ void InsertLexi(Node **root, char *word, char *meaning, int info_flag, int init_
 
 }
 
-void UpdateMeaning(Node **root, char *word, char *meaning, int init_flag) {
+int UpdateMeaning(Node **root, char *word, char *meaning, int init_flag) {
 	if(IsEmpty(*root)){
 		if(init_flag == 0)
 			printf("\t<%s>\n", " Error: Dictionary Empty !");
-		return;
+		return 0;
 	}
 
 	if(strcmp(word,(*root)->word) == 0)
@@ -133,14 +135,10 @@ void UpdateMeaning(Node **root, char *word, char *meaning, int init_flag) {
 		(*root)->meaning = realloc((*root)->meaning, sizeof(strlen(meaning)));
 		strcpy((*root)->meaning, meaning);
 		printf("\t<%s%s%s>\n", "Success: ", word, " Updated !");
-		return;
+		return 1;
 	}
-	UpdateMeaning(&((*root)->left), word, meaning, 1);
-	UpdateMeaning(&((*root)->right), word, meaning, 1);
 
-	if(init_flag == 0)
-		printf("\t<%s%s%s>\n", "Failure: ", word, " Not Found !");
-
+	return UpdateMeaning(&((*root)->left), word, meaning, 1) || UpdateMeaning(&((*root)->right), word, meaning, 1);
 }
 
 
@@ -152,11 +150,11 @@ void Search(Node *root, char *word, int init_flag) {
 		return;
 	}
 	static int result_count;
-	if(init_flag == 0) {
+
+	if(init_flag == 0){
 		result_count = 0;
-	}
-	if(init_flag == 0)
 		printf("%s\n", "-----------------Search Results----------------");
+	}
 
 
 	if(strncmp(word,root->word,strlen(word)) == 0)
@@ -190,14 +188,12 @@ int FindExact(Node *root, char *word, int init_flag) {
 
 }
 
-// void Delete(Node **root, char *word) {
+// void Delete(Node **root, char *word, int init_flag) {
 // 	if(IsEmpty(*root)){
-// 		printf("\t<%s>\n", "Error: Dictionary Empty !");
+// 		if(init_flag == 0)
+// 			printf("\t<%s>\n", "Error: Dictionary Empty !");
 // 		return;
 // 	}
-
-// 	Node *current = *root;
-// 	Node *pre;
 
 // 	if(strcmp((*root)->word,word)==0){
 // 		(*root) = (*root)->next;
@@ -225,24 +221,26 @@ int FindExact(Node *root, char *word, int init_flag) {
 // }
 
 
-void Print(Node *root, int count) {
+void Print(Node *root, int init_flag) {
 	if(IsEmpty(root)){
-		if(count == 0)
+		if(init_flag == 0)
 			printf("\t<%s>\n", "Error: Dictionary Empty !");
 		return;
 	}
+	static int count;
 
-	if (count == 0) {
+	if (init_flag == 0) {
+		count = 0;
 		printf("%s\n", "-----------------------------------------------");
 		printf("%-5s%6s%20s\n", "Sr.", "WORD", "MEANING");
 		printf("%s\n", "-----------------------------------------------");
 	}
 
-	printf("%-5d %-15s : %s\n", count+1, root->word, root->meaning);
-	Print(root->left, count+1);
-	Print(root->right, count+1);
+	printf("%-5d %-15s : %s\n", ++count, root->word, root->meaning);
+	Print(root->left, 1);
+	Print(root->right, 1);
 
-	if (count == 0) {
+	if (init_flag == 0) {
 		printf("%s\n", "-----------------------------------------------");
 	}
 }

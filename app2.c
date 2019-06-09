@@ -22,7 +22,7 @@ int main()
 	char command[10];
 	char word[MAX_WORD_LEN];
 	char meaning[MAX_MEANING_LEN];
-	int found;
+	int result;
 
 	printf("%s\n", "==============DICTIONARY SIMULATION==============");
 	Menu();  // show menu
@@ -37,8 +37,8 @@ int main()
 
 		} else if(strncmp(command, "find", strlen("find")) == 0){
 			scanf("%s", word);
-			found = FindExact(head, word, 0);
-			if(!found)
+			result = FindExact(head, word, 0);
+			if(!result)
 				printf("\t<%s%s%s>\n", "Failure: ", word, " Not Found !");
 
 		} else if(strncmp(command, "show", strlen("show")) == 0){
@@ -50,7 +50,9 @@ int main()
 
 		} else if(strncmp(command, "update", strlen("update")) == 0){
 			scanf("%s %[^\n]s", word, meaning);
-			// UpdateMeaning(&head, word, meaning);
+			int result = UpdateMeaning(&head, word, meaning, 0);
+			if(!result)
+				printf("\t<%s%s%s>\n", "Failure: ", word, " Not Found !");
 
 		} else if(strncmp(command, "delete", strlen("delete")) == 0){
 			scanf("%s", word);
