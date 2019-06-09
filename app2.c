@@ -6,7 +6,7 @@ DRIVER PROGRAM OR APPLICATION FOR DICTIONARY
 	Project	: Dictionary Simulation
 */
 
-#include "./res/linkedlist.h"
+#include "./res/BST.h"
 
 
 // Function Protypes
@@ -32,26 +32,26 @@ int main()
 
 		if(strncmp(command, "search-all", strlen("search-all")) == 0){
 			scanf("%s", word);
-			Search(head, word);
+			Search(head, word, 0);
 
 		} else if(strncmp(command, "find", strlen("find")) == 0){
 			scanf("%s", word);
 			FindExact(head, word);
 
 		} else if(strncmp(command, "show", strlen("show")) == 0){
-			Print(head);
+			Print(head, 0);
 
 		} else if(strncmp(command, "add", strlen("add")) == 0){
 			scanf("%s %[^\n]s", word, meaning);
-			InsertLexi(&head, word, meaning, 1);
+			// InsertLexi(&head, word, meaning, 1);
 
 		} else if(strncmp(command, "update", strlen("update")) == 0){
 			scanf("%s %[^\n]s", word, meaning);
-			UpdateMeaning(&head, word, meaning);
+			// UpdateMeaning(&head, word, meaning);
 
 		} else if(strncmp(command, "delete", strlen("delete")) == 0){
 			scanf("%s", word);
-			Delete(&head, word);
+			// Delete(&head, word);
 
 		} else if(strncmp(command, "menu", strlen("menu")) == 0){
 			Menu();
@@ -60,7 +60,7 @@ int main()
 			CommandFormats();
 
 		} else if(strncmp(command, "save", strlen("save")) == 0){
-			SaveDictionary(head);
+			// SaveDictionary(head);
 			printf("%s\n", "<Info: Dictionary Database Updated>");
 
 		}  else if(strncmp(command, "quit", strlen("quit")) == 0) {

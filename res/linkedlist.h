@@ -1,4 +1,5 @@
-/* Implementation of dictionary using Linked List 
+/* 
+Implementation of dictionary using Linked List 
 	By 		: VIKAS KUMAR
 	Roll 	: 43
 	Enroll	: 2017BCSE052
@@ -13,27 +14,49 @@
 // dictionary database address
 const char db_addr[100] = "./res/dict_min.txt";
 
+// linked list node structure
 typedef struct node {
 	char *word;
 	char *meaning;
 	struct node *next;
 } Node;
 
-// protypes
+
+// Function Prototypes
+Node* getNewNode(char* word, char *meaning);
 void InitializeDictionary(Node **head);
 void SaveDictionary(Node *head);
-Node* getNewNode(char* word, char *meaning);
 void InsertLexi(Node **head, char *word, char *meaning, int info_flag);
 void UpdateMeaning(Node **head, char *word, char *meaning);
 void Search(Node *head, char *data);
+void FindExact(Node *head, char *data);
 void Delete(Node **head, char *data);
 void Print(Node *head);
 int IsEmpty(Node *head);
-int Size(Node *head);
+int TotalWords(Node *head);
 
 
-// function definitions
+// Function Definitions
 
+/* 
+	This function takes word and meaning strings
+	and creates a newNode and returns the address of that node
+*/
+Node* getNewNode(char *word, char *meaning) {
+	Node *newNode = (Node *) malloc(sizeof(Node));
+	newNode->word = (char *) malloc(sizeof(char)*strlen(word));
+	newNode->meaning = (char *) malloc(sizeof(char)*strlen(meaning));
+	strcpy(newNode->word,word);
+	strcpy(newNode->meaning,meaning);
+	newNode->next = NULL;
+
+	return newNode;
+}
+
+/* 
+	This function reads data from dictionary database(a text file on db_addr)
+	and creates & stores the data to a linked list denoted by head
+*/
 void InitializeDictionary(Node **head){
 	int total_words;
 	char ch;
@@ -65,10 +88,14 @@ void InitializeDictionary(Node **head){
 	}
 }
 
+/* 
+	This function reads data from linked list denoted by head
+	and stores that data to the dictionary database(text file on db_addr)
+*/
 void SaveDictionary(Node *head){
 	FILE *fp = fopen(db_addr, "w");
 	Node *temp = head;
-	fprintf(fp, "%s:%d\n", "words",Size(head));
+	fprintf(fp, "%s:%d\n", "words",TotalWords(head));
 	while(temp->next != NULL) {
 		fprintf(fp, "%s:%s\n", temp->word, temp->meaning);
 		temp = temp->next;
@@ -78,18 +105,11 @@ void SaveDictionary(Node *head){
 	fclose(fp);
 }
 
-Node* getNewNode(char *word, char *meaning) {
-	Node *newNode = (Node *) malloc(sizeof(Node));
-	newNode->word = (char *) malloc(sizeof(char)*strlen(word) + 1);
-	newNode->meaning = (char *) malloc(sizeof(char)*strlen(meaning) + 1);
-	strcpy(newNode->word,word);
-	strcpy(newNode->meaning,meaning);
-	newNode->next = NULL;
-
-	return newNode;
-}
-
-
+/* 
+	This function takes word and meaning stings as arguments
+	and creates a new node using them and inserts that node 
+	LEXICOGRAPHICALLY into the linked list denoted by head
+*/
 void InsertLexi(Node **head, char *word, char *meaning, int info_flag) {
 	// get new node
 	Node *newNode = getNewNode(word,meaning);
@@ -134,6 +154,11 @@ void InsertLexi(Node **head, char *word, char *meaning, int info_flag) {
 		printf("\t<%s%s%s>\n", "Success: ", word, " Added !");
 }
 
+
+/*
+	This function function finds and updates the entered
+	word's meaning
+*/
 void UpdateMeaning(Node **head, char *word, char *meaning) {
 	if(IsEmpty(*head)){
 		printf("\t<%s>\n", " Error: Dictionary Empty !");
@@ -157,7 +182,11 @@ void UpdateMeaning(Node **head, char *word, char *meaning) {
 
 }
 
-
+/*
+	This function finds all the words which 
+	begin with the entered word and
+	prints their meanings and number of words found
+*/
 void Search(Node *head, char *word) {
 	if(IsEmpty(head)){
 		printf("\t<%s>\n", " Error: Dictionary Empty !");
@@ -178,6 +207,33 @@ void Search(Node *head, char *word) {
 	printf("%s%d%s\n", "----------------Found ",result_count," Results---------------");
 }
 
+
+/*
+	This function finds exact words and its meaning 
+*/
+void FindExact(Node *head, char *word) {
+	if(IsEmpty(head)){
+		printf("\t<%s>\n", " Error: Dictionary Empty !");
+		return;
+	}
+	Node *temp = head;
+	while(temp != NULL)
+	{
+		if(strcmp(word,temp->word) == 0)
+		{
+			printf("\t%-15s : %s\n", temp->word, temp->meaning);
+			return;
+		}
+		temp = temp->next;
+	}
+
+	printf("\t<%s%s%s>\n", "Failure: ", word, " Not Found !");
+}
+
+
+/*
+	This function finds and deletes the entered word
+*/
 void Delete(Node **head, char *word) {
 	if(IsEmpty(*head)){
 		printf("\t<%s>\n", "Error: Dictionary Empty !");
@@ -187,6 +243,7 @@ void Delete(Node **head, char *word) {
 	Node *current = *head;
 	Node *pre;
 
+	// if the word is at head node
 	if(strcmp((*head)->word,word)==0){
 		(*head) = (*head)->next;
 		free(current);
@@ -195,7 +252,7 @@ void Delete(Node **head, char *word) {
 	}
 
 	while(current->next != NULL) {
-		if(strcmp((*head)->word,word)==0)
+		if(strcmp(current->word,word)==0)
 			break;
 
 		pre = current;
@@ -212,6 +269,11 @@ void Delete(Node **head, char *word) {
 	}
 }
 
+
+/*
+	Print function traverses the whole list
+	and prints all the words along with their meanings
+*/
 void Print(Node *head) {
 	if(IsEmpty(head)){
 		printf("\t<%s>\n", "Error: Dictionary Empty !");
@@ -232,11 +294,19 @@ void Print(Node *head) {
 	free(temp);
 }
 
+/*
+	This function returns 1 if the dictionary is empty
+	and returns 0 if the dictionary is not empty
+*/
 int IsEmpty(Node *head) {
 	return (head == NULL);
 }
 
-int Size(Node *head) {
+/*
+	This function returns the total words contained by 
+	the dictionary
+*/
+int TotalWords(Node *head) {
 	int size = 0;
 
 	Node *temp = head;
