@@ -1,4 +1,4 @@
-#include "./res/linkedlist.c"
+#include "./res/linkedlist.h"
 
 
 

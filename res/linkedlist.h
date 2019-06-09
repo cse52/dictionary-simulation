@@ -1,16 +1,23 @@
+/* Implementation of dictionary using Linked List 
+	By 		: VIKAS KUMAR
+	Roll 	: 43
+	Enroll	: 2017BCSE052
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #define MAX_WORD_LEN 300
 #define MAX_MEANING_LEN 10000
 
+// dictionary database address
+const char db_addr[100] = "./res/dict_min.txt";
+
 typedef struct node {
 	char *word;
 	char *meaning;
 	struct node *next;
 } Node;
-
-const char db_addr[100] = "./res/dict_min.txt";
 
 // protypes
 void InitializeDictionary(Node **head);
@@ -73,8 +80,8 @@ void SaveDictionary(Node *head){
 
 Node* getNewNode(char *word, char *meaning) {
 	Node *newNode = (Node *) malloc(sizeof(Node));
-	newNode->word = (char *) malloc(sizeof(char)*strlen(word));
-	newNode->meaning = (char *) malloc(sizeof(char)*strlen(meaning));
+	newNode->word = (char *) malloc(sizeof(char)*strlen(word) + 1);
+	newNode->meaning = (char *) malloc(sizeof(char)*strlen(meaning) + 1);
 	strcpy(newNode->word,word);
 	strcpy(newNode->meaning,meaning);
 	newNode->next = NULL;
