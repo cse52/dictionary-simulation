@@ -25,10 +25,10 @@ typedef struct node {
 void InitializeDictionary(Node **root);
 void SaveDictionary(Node *root, int status);
 Node* getNewNode(char* word, char *meaning);
-void InsertLexi(Node **root, char *word, char *meaning, int info_flag);
+void InsertLexi(Node **root, char *word, char *meaning, int info_flag, int init_flag);
 void UpdateMeaning(Node **root, char *word, char *meaning, int status);
-void Search(Node *root, char *data, int result_count);
-void FindExact(Node *root, char *word, int result_count);
+void Search(Node *root, char *data, int init_flag);
+int FindExact(Node *root, char *word, int init_flag);
 // void Delete(Node **root, char *data);
 void Print(Node *root, int count);
 int IsEmpty(Node *root);
@@ -58,7 +58,7 @@ void InitializeDictionary(Node **root){
 			meaning = realloc(meaning, (sizeof(char)*strlen(meaning)+1));
 			ch = getc(fp);		// to remove the \n at the end of each line
 
-			InsertLexi(root,word,meaning,0);
+			InsertLexi(root,word,meaning,0,0);
 		}
 
 		fclose(fp);
@@ -68,9 +68,9 @@ void InitializeDictionary(Node **root){
 	}
 }
 
-void SaveDictionary(Node *root, int count){
+void SaveDictionary(Node *root, int init_flag){
 	FILE *fp;
-	if(count == 0) {
+	if(init_flag == 0) {
 		fp = fopen(db_addr, "w");
 		fprintf(fp, "%s:%d", "words",Size(root));
 	}
@@ -78,10 +78,10 @@ void SaveDictionary(Node *root, int count){
 		return;
 
 	fprintf(fp, "\n%s:%s", root->word, root->meaning);
-	SaveDictionary(root->left, count+1);
-	SaveDictionary(root->right, count+1);
+	SaveDictionary(root->left, 1);
+	SaveDictionary(root->right, 1);
 
-	if(count == 0)
+	if(init_flag == 0)
 		fclose(fp);
 }
 
@@ -97,7 +97,7 @@ Node* getNewNode(char *word, char *meaning) {
 }
 
 
-void InsertLexi(Node **root, char *word, char *meaning, int info_flag) {
+void InsertLexi(Node **root, char *word, char *meaning, int info_flag, int init_flag) {
 	// get new node
 	Node *newNode = getNewNode(word,meaning);
 
@@ -109,23 +109,21 @@ void InsertLexi(Node **root, char *word, char *meaning, int info_flag) {
 	}
 
 	if(strcmp(word, (*root)->word) < 0) {
-		InsertLexi(&((*root)->left), word, meaning, info_flag);
+		InsertLexi(&((*root)->left), word, meaning, info_flag, 1);
 	} else if(strcmp(word, (*root)->word) > 0) {
-		InsertLexi(&((*root)->right), word, meaning, info_flag);
+		InsertLexi(&((*root)->right), word, meaning, info_flag, 1);
 	} else {
 		if(info_flag)
 			printf("\t<%s%s%s>\n", "Failure: ", word, " Already Exists !");
 		return;
 	}
 
-	if(info_flag)
-		printf("\t<%s%s%s>\n", "Success: ", word, " Added !");
 
 }
 
-void UpdateMeaning(Node **root, char *word, char *meaning, int count) {
+void UpdateMeaning(Node **root, char *word, char *meaning, int init_flag) {
 	if(IsEmpty(*root)){
-		if(count == 0)
+		if(init_flag == 0)
 			printf("\t<%s>\n", " Error: Dictionary Empty !");
 		return;
 	}
@@ -137,23 +135,27 @@ void UpdateMeaning(Node **root, char *word, char *meaning, int count) {
 		printf("\t<%s%s%s>\n", "Success: ", word, " Updated !");
 		return;
 	}
-	UpdateMeaning(&((*root)->left), word, meaning, count+1);
-	UpdateMeaning(&((*root)->right), word, meaning, count+1);
+	UpdateMeaning(&((*root)->left), word, meaning, 1);
+	UpdateMeaning(&((*root)->right), word, meaning, 1);
 
-	if(count == 0)
+	if(init_flag == 0)
 		printf("\t<%s%s%s>\n", "Failure: ", word, " Not Found !");
 
 }
 
 
-void Search(Node *root, char *word, int result_count) {
+void Search(Node *root, char *word, int init_flag) {
 	if(IsEmpty(root)){
-		if (result_count == 0) {
+		if (init_flag == 0) {
 			printf("\t<%s>\n", " Error: Dictionary Empty !");
 		}
 		return;
 	}
-	if(result_count == 0)
+	static int result_count;
+	if(init_flag == 0) {
+		result_count = 0;
+	}
+	if(init_flag == 0)
 		printf("%s\n", "-----------------Search Results----------------");
 
 
@@ -162,29 +164,29 @@ void Search(Node *root, char *word, int result_count) {
 		printf("\t%-15s : %s\n", root->word, root->meaning);
 		result_count++;
 	}
-	Search(root->left, word, result_count);
-	Search(root->right, word, result_count);
+	Search(root->left, word, 1);
+	Search(root->right, word, 1);
 
-	if(result_count == 0)
+	if(init_flag == 0)
 		printf("%s%d%s\n", "----------------Found ",result_count," Results---------------");
 }
 
 
-void FindExact(Node *root, char *word, int result_count) {
+int FindExact(Node *root, char *word, int init_flag) {
 	if(IsEmpty(root)){
-		if (result_count == 0) {
+		if (init_flag == 0) {
 			printf("\t<%s>\n", " Error: Dictionary Empty !");
 		}
-		return;
+		return 0;
 	}
 
-	if(strncmp(word,root->word,strlen(word)) == 0)
+	if(strcmp(word, root->word) == 0)
 	{
-		printf("\t%-15s : %s\n", root->word, root->meaning);
-		return;
+		printf("\t%-10s : %s\n", root->word, root->meaning);
+		return 1;
 	}
-	Search(root->left, word, result_count+1);
-	Search(root->right, word, result_count+1);
+	
+	return FindExact(root->left, word, 1) || FindExact(root->right, word, 1);
 
 }
 

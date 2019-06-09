@@ -12,7 +12,7 @@ Implementation of dictionary using Linked List
 #define MAX_MEANING_LEN 10000
 
 // dictionary database address
-const char db_addr[100] = "./res/dict_min.txt";
+const char db_addr[100] = "./res/dict_db.txt";
 
 // linked list node structure
 typedef struct node {

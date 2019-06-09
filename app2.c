@@ -22,6 +22,7 @@ int main()
 	char command[10];
 	char word[MAX_WORD_LEN];
 	char meaning[MAX_MEANING_LEN];
+	int found;
 
 	printf("%s\n", "==============DICTIONARY SIMULATION==============");
 	Menu();  // show menu
@@ -36,14 +37,16 @@ int main()
 
 		} else if(strncmp(command, "find", strlen("find")) == 0){
 			scanf("%s", word);
-			FindExact(head, word);
+			found = FindExact(head, word, 0);
+			if(!found)
+				printf("\t<%s%s%s>\n", "Failure: ", word, " Not Found !");
 
 		} else if(strncmp(command, "show", strlen("show")) == 0){
 			Print(head, 0);
 
 		} else if(strncmp(command, "add", strlen("add")) == 0){
 			scanf("%s %[^\n]s", word, meaning);
-			// InsertLexi(&head, word, meaning, 1);
+			InsertLexi(&head, word, meaning, 1, 0);
 
 		} else if(strncmp(command, "update", strlen("update")) == 0){
 			scanf("%s %[^\n]s", word, meaning);
@@ -60,7 +63,7 @@ int main()
 			CommandFormats();
 
 		} else if(strncmp(command, "save", strlen("save")) == 0){
-			// SaveDictionary(head);
+			SaveDictionary(head, 0);
 			printf("%s\n", "<Info: Dictionary Database Updated>");
 
 		}  else if(strncmp(command, "quit", strlen("quit")) == 0) {

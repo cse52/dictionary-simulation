@@ -1,4 +1,4 @@
-words:279
+words:278
 air:the mixture of gases that surrounds the Earth and that we breathe
 amount:a collection or mass, especially of something that cannot be counted
 animal:a collection or mass, especially of something that cannot be counted
@@ -89,9 +89,8 @@ harbour:an area of water next to the coast, often protected from the sea by a th
 hate:to dislike someone or something very much
 hearing:the ability to hear, or an official meeting that is held to collect the facts about an event or problem
 heat:the quality of being hot or warm, or the temperature of something
-help:to make it possible or easier for someone to do something, by doing part of the work yourself
+Y@£÷:to make it possible or easier for someone to do something, by doing part of the work yourself
 history:to make it possible or easier for someone to do something, by doing part of the work yourself
-:to want something to happen or to be true, and usually have a good reason to think that it might
 hour:a period of 60 minutes
 ice:water that has frozen and become solid, or pieces of this
 idea:a suggestion or plan for doing something
